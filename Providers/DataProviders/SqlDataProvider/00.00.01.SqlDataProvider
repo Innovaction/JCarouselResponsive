@@ -13,3 +13,35 @@
 /************************************************************/
 /*****              SqlDataProvider                     *****/
 /************************************************************/
+
+
+CREATE TABLE [dbo].[CarouselData](
+	[CarouselDataID] [int] IDENTITY(1,1) NOT NULL,
+	[ImagenURL] [nvarchar](max) NULL,
+	[Texto] [nvarchar](max) NULL,
+	[Link] [nvarchar](max) NULL,
+	[SeccionID] [int] NULL,
+	[Orden] [int] NULL,
+ CONSTRAINT [PK_CarouselData] PRIMARY KEY CLUSTERED 
+(
+	[CarouselDataID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+
+CREATE PROCEDURE [dbo].[CarouselDataList]
+AS
+
+SELECT
+	[CarouselDataID],
+	[ImagenURL],
+	[Texto],
+	[Link],
+	[SeccionID]
+FROM dbo.CarouselData
+
+
+GO

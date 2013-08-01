@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCarouselResponsive", "JCarouselResponsive.csproj", "{0A90DD61-8D16-4161-A7C0-77859F5EE529}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8321E1D4-AEFD-41FC-B43C-0749BA383682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCarouselResponsive", "JCarouselResponsive.csproj", "{0A90DD61-8D16-4161-A7C0-77859F5EE529}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

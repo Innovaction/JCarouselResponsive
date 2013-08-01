@@ -60,8 +60,6 @@ namespace DotNetNuke.Modules.JCarouselResponsive
         {
             try
             {
-
-
                 //Consultar el web service
 
                 //Agarrar la respuesta
@@ -75,90 +73,15 @@ namespace DotNetNuke.Modules.JCarouselResponsive
                 DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.ba-throttle-debounce.min.js");
                 DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.transit.min.js");
                 DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.carouFredSel-6.2.1-packed.js");
-                /*
-                LiteralCarousel.Text = @"<HEAD>
-		
-		<LINK href=""http://www.innovaction.com.ar/Scripts/style.css"" rel=""stylesheet"" type=""text/css"">
 
-    
-
-			<script type=""text/javascript"" language=""javascript"">
-				$(function() {
-				
-				$('#foo2').carouFredSel({
-					auto: false,
-					prev: '#prev2',
-					next: '#next2',
-					pagination: ""#pager2"",
-					mousewheel: true,
-					responsive: true,
-					items:	{
-							visible:3,
-							height: ""65%""
-							},
-					swipe: {
-						onMouse: false,
-						onTouch: true
-					}
-					
-				});
-				
-				})
-			</script>
-			
-			
-</HEAD>
-
-<BODY>
-
-
-<!-- Container that contains everything for responsive purposes -->
-
-<div class = ""CarouselWrapper_" + ModuleId.ToString() + @""">
-
-<!-- Our carousel's div -->
-	<div class=""list_carousel"">
-					<ul id=""foo2"">
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						<li><div class=""DivItemImage""><img src=""formulas_01.jpg"" alt=""=)"" class=""ImgItemImage""> </div> <div class=""DivItemDescription""><span class=""SpanItemDesctiptionText"">Formulas Magistrales</span></div></li>
-						
-					</ul>
-					<div class=""clearfix""></div>
-					<div class=""left"" style=""background-color:yellow;""><a id=""prev2"" class=""prev"" href=""#""><img src=""next.jpg"" alt="""" style=""max-width:100%;max-height:100%;""></a></div>
-					<div class=""right"" style=""background-color:yellow;""><a id=""next2"" class=""next"" href=""#"">&gt;</a></div>
-					<div id=""pager2"" class=""pager""></div>
-	</div>
-</div>	
-
-</BODY>
-			
-</HTML>";
-                 * */
-                LiteralCarousel.Text = GenerateHeader() + GenerateTemplate() + GenerateFooter();
+                try
+                {
+                    LiteralCarousel.Text = GenerateHeader() + GenerateTemplate() + GenerateFooter();
+                }
+                catch
+                {
+                    LiteralCarousel.Text = "Por favor ir a settings y grabar la hoja de estilos. Gracias";
+                }
             }
             catch (Exception exc) //Module failed to load
             {
@@ -197,7 +120,7 @@ namespace DotNetNuke.Modules.JCarouselResponsive
 
             return Template;
         }
-        private string GenerateHeader()
+        private string GenerateHeaderBackup()
         {
 
             var myHeader = @"<HEAD>
@@ -247,6 +170,72 @@ namespace DotNetNuke.Modules.JCarouselResponsive
 
             return myHeader;
              }
+
+        private string GenerateHeader()
+        {
+            try
+            {
+                var myHeader = @"<HEAD>
+		
+		                   <style type=""text/css"">
+                            "
+                                + Settings["StyleSheetModuleID"].ToString() +
+                               @" </style>
+
+    
+
+			                    <script type=""text/javascript"" language=""javascript"">
+				                    $(function() {
+				
+				                    $('#foo2" + ModuleId.ToString() + @"').carouFredSel({
+					                    auto: false,
+					                    prev: '#prev2',
+					                    next: '#next2',
+					                    pagination: ""#pager2"",
+					                    mousewheel: true,
+					                    responsive: true,
+					                    items:	{
+							                    visible:3,
+							                    height: ""65%""
+							                    },
+					                    swipe: {
+						                    onMouse: false,
+						                    onTouch: true
+					                    }
+					
+				                    });
+				
+				                    })
+			                    </script>
+			
+			
+                    </HEAD>
+
+                    <BODY>
+
+
+                    <!-- Container that contains everything for responsive purposes -->
+
+                    <div class = ""CarouselWrapper_" + ModuleId.ToString() + @""">
+
+                    <!-- Our carousel's div -->
+	                    <div class=""list_carousel"">
+					                    <ul id=""foo2" + ModuleId.ToString() + @""">";
+
+
+
+                myHeader = myHeader.Replace("prev2", "prev2" + ModuleId.ToString());
+                myHeader = myHeader.Replace("next2", "next2" + ModuleId.ToString());
+                myHeader = myHeader.Replace("pager2", "pager2" + ModuleId.ToString());
+                return myHeader;
+            }
+            catch
+            {
+                throw new Exception("No stylesheet set");
+            }
+            
+        }
+
         private string GenerateFooter()
         {
             string myFooter = @"</ul>
@@ -260,6 +249,11 @@ namespace DotNetNuke.Modules.JCarouselResponsive
                     </BODY>
 			
                     </HTML>";
+
+            myFooter = myFooter.Replace("prev2", "prev2" + ModuleId.ToString());
+            myFooter = myFooter.Replace("next2", "next2" + ModuleId.ToString());
+            myFooter = myFooter.Replace("pager2", "pager2" + ModuleId.ToString());
+          
             return myFooter;
         }
 

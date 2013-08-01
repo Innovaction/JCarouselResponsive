@@ -127,7 +127,7 @@ using System.Data.Sql;
     {
         public static string StyleSheet = @".CarouselWrapper 
 {
-	width:60%;
+	width:100%;
 	background-color: #FF0030;
 	
 }
@@ -175,6 +175,19 @@ using System.Data.Sql;
 	top: 40%;
 	height: 20%;
 	width:3%;
+}
+
+.pager
+{
+   text-align: center;
+   letter-spacing: 4px;
+/*** PARA OCULTAR EL PAGINADO UNCOMMENTEAR ESTA LINEA ***/
+/*   display:none !important;*/
+}
+
+.selected
+{
+      color: red;
 }
 
 /*Image part of the Item*/

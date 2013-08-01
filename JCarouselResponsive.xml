@@ -4,6 +4,35 @@
         <name>JCarouselResponsive</name>
     </assembly>
     <members>
+        <member name="T:DotNetNuke.Modules.JCarouselResponsive.Components.FeatureController">
+            -----------------------------------------------------------------------------
+            <summary>
+            The Controller class for JCarouselResponsive
+            
+            The FeatureController class is defined as the BusinessController in the manifest file (.dnn)
+            DotNetNuke will poll this class to find out which Interfaces the class implements. 
+            
+            The IPortable interface is used to import/export content from a DNN module
+            
+            The ISearchable interface is used by DNN to index the content of a module
+            
+            The IUpgradeable interface allows module developers to execute code during the upgrade 
+            process for a module.
+            
+            Below you will find stubbed out implementations of each, uncomment and populate with your own data
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="T:DotNetNuke.Modules.JCarouselResponsive.Data.DataProvider">
+            -----------------------------------------------------------------------------
+            <summary>
+            An abstract class for the data access layer
+            
+            The abstract data provider provides the methods that a control data provider (sqldataprovider)
+            must implement. You'll find two commented out examples in the Abstract methods region below.
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
         <member name="T:DotNetNuke.Modules.JCarouselResponsive.Data.SqlDataProvider">
             -----------------------------------------------------------------------------
             <summary>
@@ -16,13 +45,40 @@
             </summary>
             -----------------------------------------------------------------------------
         </member>
-        <member name="T:DotNetNuke.Modules.JCarouselResponsive.Data.DataProvider">
+        <member name="T:DotNetNuke.Modules.JCarouselResponsive.Edit">
+            <summary>
+            EditJCarouselResponsive class.
+            </summary>
+            <remarks>
+            Auto-generated class.
+            </remarks>
             -----------------------------------------------------------------------------
             <summary>
-            An abstract class for the data access layer
+            The EditJCarouselResponsive class is used to manage content
             
-            The abstract data provider provides the methods that a control data provider (sqldataprovider)
-            must implement. You'll find two commented out examples in the Abstract methods region below.
+            Typically your edit control would be used to create new content, or edit existing content within your module.
+            The ControlKey for this control is "Edit", and is defined in the manifest (.dnn) file.
+            
+            Because the control inherits from JCarouselResponsiveModuleBase you have access to any custom properties
+            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+            
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="T:DotNetNuke.Modules.JCarouselResponsive.JCarouselResponsiveModuleBase">
+            <summary>
+            This base class can be used to define custom properties for multiple controls. 
+            An example module, DNNSimpleArticle (http://dnnsimplearticle.codeplex.com) uses this for an ArticleId
+            
+            Because the class inherits from PortalModuleBase, properties like ModuleId, TabId, UserId, and others, 
+            are accessible to your module's controls (that inherity from JCarouselResponsiveModuleBase
+            
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.JCarouselResponsive.Edit.Page_Load(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Page_Load runs when the control is loaded
             </summary>
             -----------------------------------------------------------------------------
         </member>
@@ -78,62 +134,6 @@
             -----------------------------------------------------------------------------
             <summary>
             UpdateSettings saves the modified settings to the Database
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="T:DotNetNuke.Modules.JCarouselResponsive.Edit">
-            <summary>
-            EditJCarouselResponsive class.
-            </summary>
-            <remarks>
-            Auto-generated class.
-            </remarks>
-            -----------------------------------------------------------------------------
-            <summary>
-            The EditJCarouselResponsive class is used to manage content
-            
-            Typically your edit control would be used to create new content, or edit existing content within your module.
-            The ControlKey for this control is "Edit", and is defined in the manifest (.dnn) file.
-            
-            Because the control inherits from JCarouselResponsiveModuleBase you have access to any custom properties
-            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
-            
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="T:DotNetNuke.Modules.JCarouselResponsive.JCarouselResponsiveModuleBase">
-            <summary>
-            This base class can be used to define custom properties for multiple controls. 
-            An example module, DNNSimpleArticle (http://dnnsimplearticle.codeplex.com) uses this for an ArticleId
-            
-            Because the class inherits from PortalModuleBase, properties like ModuleId, TabId, UserId, and others, 
-            are accessible to your module's controls (that inherity from JCarouselResponsiveModuleBase
-            
-            </summary>
-        </member>
-        <member name="M:DotNetNuke.Modules.JCarouselResponsive.Edit.Page_Load(System.Object,System.EventArgs)">
-            -----------------------------------------------------------------------------
-            <summary>
-            Page_Load runs when the control is loaded
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="T:DotNetNuke.Modules.JCarouselResponsive.Components.FeatureController">
-            -----------------------------------------------------------------------------
-            <summary>
-            The Controller class for JCarouselResponsive
-            
-            The FeatureController class is defined as the BusinessController in the manifest file (.dnn)
-            DotNetNuke will poll this class to find out which Interfaces the class implements. 
-            
-            The IPortable interface is used to import/export content from a DNN module
-            
-            The ISearchable interface is used by DNN to index the content of a module
-            
-            The IUpgradeable interface allows module developers to execute code during the upgrade 
-            process for a module.
-            
-            Below you will find stubbed out implementations of each, uncomment and populate with your own data
             </summary>
             -----------------------------------------------------------------------------
         </member>

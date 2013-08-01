@@ -134,12 +134,13 @@ namespace DotNetNuke.Modules.JCarouselResponsive
 
             var regex = new Regex(Regex.Escape("."));
             var myStyleSheetModified = default(string);
+            var first = true;
             for (int msb = 0; msb < mt.Count; msb++)
             {
                 foreach (var element in mt[msb].Captures)
                 {
-                    //Console.Write(element.ToString());
-                    var newText = regex.Replace(element.ToString(), ".CarouselWrapper_"+ModuleId.ToString(), 1);
+                    if (first) { first = false; myStyleSheetModified = element.ToString().Replace(".CarouselWrapper",".CarouselWrapper_"+ModuleId.ToString()); continue; } //ignore the carouselwrapper
+                    var newText = regex.Replace(element.ToString(), ".CarouselWrapper_"+ModuleId.ToString()+" .", 1);
                     myStyleSheetModified += newText;
                 }
             }
