@@ -114,6 +114,15 @@
             
             </summary>
         </member>
+        <member name="F:DotNetNuke.Modules.JCarouselResponsive.Settings.TextBoxCarouselHeight">
+            <summary>
+            TextBoxCarouselHeight control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
         <member name="F:DotNetNuke.Modules.JCarouselResponsive.Settings.TextBoxStyleSheet">
             <summary>
             TextBoxStyleSheet control.

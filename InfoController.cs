@@ -125,7 +125,7 @@ using System.Data.Sql;
 
     public class DefaultStyleSheet
     {
-        public static string StyleSheet = @".CarouselWrapper 
+        public static string StyleSheetBackup = @".CarouselWrapper 
 {
 	width:100%;
 	background-color: #FF0030;
@@ -133,7 +133,7 @@ using System.Data.Sql;
 }
 .list_carousel {
 	background-color: white;
-	width: 80%;
+	width: 85%;
 	margin: 0 auto;
 	/*importantisimo para las imagenes*/
 	position:relative; /*hace que el position absolute llegue aca*/
@@ -212,6 +212,122 @@ using System.Data.Sql;
 		height: 25%;
 		font-size: 0.6em;
 		vertical-align: middle;
+	}
+
+
+@media screen and (min-width: 890px)
+{
+	.DivItemDescription
+	{
+		font-size: 0.81em;
+	}
+}
+
+
+@media screen and (min-width: 1150px)
+{
+	.DivItemDescription
+	{
+		font-size: 1.05em;
+	}
+}
+
+.SpanItemDesctiptionText
+{
+	top:12.5%; /* Because it's 50% (centered) of 25% which is the length of our div relative to the outer div */
+	position: relative;
+}
+";
+
+        public static string StyleSheet = @".CarouselWrapper 
+{
+	width:100%;
+	background-color: white;          /* #FF0030;*/
+	
+}
+.list_carousel {
+	background-color: white;
+	width: 85%;
+	margin: 0 auto;
+	/*importantisimo para las imagenes*/
+	position:relative; /*hace que el position absolute llegue aca*/
+}
+.list_carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li {
+	text-align: center;
+	border:  0;  /* 1px solid #999;*/
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	margin: 6px;
+	display: block;
+	float: left;
+}
+
+/*Buttons*/
+
+.left
+{
+	position: absolute;
+	left: -8.5%;
+	z-index: 79;
+	top: 35%;
+	height: 27.5%;
+	width:5%;
+/*        background-color:yellow;*/
+}
+
+.right
+{
+	position: absolute;
+	right: -8%;
+	z-index: 79;
+	top: 35%;
+	height: 27.5%;
+	width:5%;
+/*        background-color:yellow; */
+}
+
+.pager
+{
+   text-align: center;
+   letter-spacing: 4px;
+  display:none !important;
+}
+
+.selected
+{
+      color: red;
+}
+
+/*Image part of the Item*/
+
+.ImgItemImage
+{
+	max-height:100%;
+	max-width: 100%;
+}
+
+.DivItemImage 
+{
+	height:75%; 
+}
+
+
+
+/*Description part of the Item*/
+
+	.DivItemDescription
+	{
+		height: 25%;
+		font-size: 0.6em;
+		vertical-align: middle;
+                color: rgb(42,107,170);
 	}
 
 

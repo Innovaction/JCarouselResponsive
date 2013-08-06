@@ -13,6 +13,15 @@ namespace DotNetNuke.Modules.JCarouselResponsive {
     public partial class Settings {
         
         /// <summary>
+        /// TextBoxCarouselHeight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCarouselHeight;
+        
+        /// <summary>
         /// TextBoxStyleSheet control.
         /// </summary>
         /// <remarks>

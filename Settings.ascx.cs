@@ -67,6 +67,17 @@ namespace DotNetNuke.Modules.JCarouselResponsive
                     }
 
 
+                    if (Settings.Contains("CarouselHeight"))
+                    {
+                        TextBoxCarouselHeight.Text = Settings["CarouselHeight"].ToString();
+                    }
+                    else
+                    {
+                        TextBoxCarouselHeight.Text = "75";
+                    }
+                   
+
+
 
 
                     //Check for existing settings and use those on this page
@@ -110,7 +121,7 @@ namespace DotNetNuke.Modules.JCarouselResponsive
                 //tab module settings
                 modules.UpdateTabModuleSetting(TabModuleId, "StyleSheet", TextBoxStyleSheet.Text);
                 modules.UpdateTabModuleSetting(TabModuleId, "StyleSheetModuleID",  GenerateStyleSheetWithModuleID(TextBoxStyleSheet.Text));
-
+                modules.UpdateTabModuleSetting(TabModuleId, "CarouselHeight", TextBoxCarouselHeight.Text);
 
 
                

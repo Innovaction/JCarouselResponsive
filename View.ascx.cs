@@ -36,6 +36,8 @@ namespace DotNetNuke.Modules.JCarouselResponsive
     /// -----------------------------------------------------------------------------
     public partial class View : JCarouselResponsiveModuleBase, IActionable
     {
+        
+
 
         #region Event Handlers
 
@@ -58,34 +60,38 @@ namespace DotNetNuke.Modules.JCarouselResponsive
         /// -----------------------------------------------------------------------------
         private void Page_Load(object sender, System.EventArgs e)
         {
-            try
+
+            if (!Page.IsPostBack)
             {
-                //Consultar el web service
-
-                //Agarrar la respuesta
-
-                //Reemplazar el template
-
-                //Ponerlo en el literal
-
-                DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.mousewheel.min.js");
-                DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.touchSwipe.min.js");
-                DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.ba-throttle-debounce.min.js");
-                DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.transit.min.js");
-                DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.carouFredSel-6.2.1-packed.js");
-
                 try
                 {
-                    LiteralCarousel.Text = GenerateHeader() + GenerateTemplate() + GenerateFooter();
+                    //Consult web service
+
+                    //Grab answer
+
+                    //Replace template
+
+                    //Place it in literal
+
+                    DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.mousewheel.min.js");
+                    DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.touchSwipe.min.js");
+                    DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.ba-throttle-debounce.min.js");
+                    DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.transit.min.js");
+                    DotNetNuke.Web.Client.ClientResourceManagement.ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/Scripts/jquery.carouFredSel-6.2.1-packed.js");
+
+                    try
+                    {
+                        LiteralCarousel.Text = GenerateHeader() + GenerateTemplate() + GenerateFooter();
+                    }
+                    catch
+                    {
+                        LiteralCarousel.Text = "Deberá ir a settings a grabar la primer configuración. Gracias";
+                    }
                 }
-                catch
+                catch (Exception exc) //Module failed to load
                 {
-                    LiteralCarousel.Text = "Por favor ir a settings y grabar la hoja de estilos. Gracias";
+                    Exceptions.ProcessModuleLoadException(this, exc);
                 }
-            }
-            catch (Exception exc) //Module failed to load
-            {
-                Exceptions.ProcessModuleLoadException(this, exc);
             }
         }
 
@@ -120,57 +126,6 @@ namespace DotNetNuke.Modules.JCarouselResponsive
 
             return Template;
         }
-        private string GenerateHeaderBackup()
-        {
-
-            var myHeader = @"<HEAD>
-		
-		                    <LINK href=""http://www.innovaction.com.ar/Scripts/style.css"" rel=""stylesheet"" type=""text/css"">
-
-    
-
-			                    <script type=""text/javascript"" language=""javascript"">
-				                    $(function() {
-				
-				                    $('#foo2').carouFredSel({
-					                    auto: false,
-					                    prev: '#prev2',
-					                    next: '#next2',
-					                    pagination: ""#pager2"",
-					                    mousewheel: true,
-					                    responsive: true,
-					                    items:	{
-							                    visible:3,
-							                    height: ""65%""
-							                    },
-					                    swipe: {
-						                    onMouse: false,
-						                    onTouch: true
-					                    }
-					
-				                    });
-				
-				                    })
-			                    </script>
-			
-			
-                    </HEAD>
-
-                    <BODY>
-
-
-                    <!-- Container that contains everything for responsive purposes -->
-
-                    <div class = ""CarouselWrapper_" + ModuleId.ToString() + @""">
-
-                    <!-- Our carousel's div -->
-	                    <div class=""list_carousel"">
-					                    <ul id=""foo2"">";
-
-
-            return myHeader;
-             }
-
         private string GenerateHeader()
         {
             try
@@ -192,11 +147,11 @@ namespace DotNetNuke.Modules.JCarouselResponsive
 					                    prev: '#prev2',
 					                    next: '#next2',
 					                    pagination: ""#pager2"",
-					                    mousewheel: true,
+					                    mousewheel: false,
 					                    responsive: true,
 					                    items:	{
 							                    visible:3,
-							                    height: ""65%""
+							                    height: """+ Settings["CarouselHeight"].ToString() + @"%""
 							                    },
 					                    swipe: {
 						                    onMouse: false,
@@ -238,10 +193,11 @@ namespace DotNetNuke.Modules.JCarouselResponsive
 
         private string GenerateFooter()
         {
+
             string myFooter = @"</ul>
 					<div class=""clearfix""></div>
-					<div class=""left"" style=""background-color:yellow;""><a id=""prev2"" class=""prev"" href=""#""><img src=""next.jpg"" alt="""" style=""max-width:100%;max-height:100%;""></a></div>
-					<div class=""right"" style=""background-color:yellow;""><a id=""next2"" class=""next"" href=""#"">&gt;</a></div>
+					<div class=""left"" ><a id=""prev2"" class=""prev"" href=""#""><img src=""/DesktopModules/JCarouselResponsive/prev.png"" alt="""" style=""max-width:100%;max-height:100%;""></a></div>
+					<div class=""right""><a id=""next2"" class=""next"" href=""#""><img src=""/DesktopModules/JCarouselResponsive/next.png"" alt="""" style=""max-width:100%;max-height:100%;""></a></div>
 					<div id=""pager2"" class=""pager""></div>
 	                    </div>
                     </div>	
